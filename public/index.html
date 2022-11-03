@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>WebRTC Training</title>
+</head>
+<body>
+    <h1>WEBRTC Training</h1>
+    <div id="selectRoom">
+        <label for="">Type Room Name</label>
+        <input type="text" name="roomNumber" id="roomNumber">
+        <button id="goRoom">Go</button>
+    </div>
+    <div id="consultingRoom" style="display:none">
+        <h2 id="callName"></h2>
+        <p>
+            <input type="text" id="inputCallName">
+            <button id="setName" type="button" disabled>Set Name</button>
+        </p>
+        <video id="localVideo" autoPlay controls></video>
+        <video id="remoteVideo" autoPlay controls></video>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
